@@ -66,18 +66,18 @@
       }
     });
     if (url === openUrl) {
-		  $.ajax({
-		    cache : false,
-		    async : false,
-		    type: "get",
-		    url: "http://122.112.219.12:9997/lanzou/jx?url=" + openUrl,
-		    success: function (data) {
-			    if (data.indexOf("http") !== -1) {
-				    url = data
-			    }
-		    }
-		  });
-	  }
+      $.ajax({
+        cache : false,
+        async : false,
+        type: "get",
+        url: "http://122.112.219.12:9997/lanzou/jx?url=" + openUrl,
+        success: function (data) {
+          if (data.indexOf("http") !== -1) {
+            url = data
+          }
+        }
+      });
+    }
     window.open(url)
   }
 </script>
