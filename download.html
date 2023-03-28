@@ -52,6 +52,7 @@
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
   function openUrl(openUrl) {
+    var url = openUrl
     $.ajax({
       cache : false,
       async : false,
@@ -60,11 +61,24 @@
       datatype: "json",
       success: function (data) {
         if (data.status === 1) {
-          openUrl = data.info
+          url = data.info
         }
       }
     });
-    window.open(openUrl)
+    if (url === openUrl) {
+		  $.ajax({
+		    cache : false,
+		    async : false,
+		    type: "get",
+		    url: "http://122.112.219.12:9997/lanzou/jx?url=" + openUrl,
+		    success: function (data) {
+			    if (data.indexOf("http") !== -1) {
+				    url = data
+			    }
+		    }
+		  });
+	  }
+    window.open(url)
   }
 </script>
 </html>
