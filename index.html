@@ -35,7 +35,7 @@
 				<ul>
 					<!--菜单-->
 					<li><a href="https://www.kancloud.cn/liushi/qqyxnz/2990412">科技使用教程</a></li>
-					<li><a href="https://lanzoux.com/b00511yda">科技下载地址</a></li>
+					<li><a href="http://122.112.219.12:5147/qqyx/downloadScript.html">科技下载</a></li>
 					<!--<li><a href="download.html">替换后游戏下载</a></li>-->
 					<li><a href="http://a.liushi.icu/">购卡地址</a></li>
 					<li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=SxzS-CeWVVMZRYyXSz6PQRFOUw_MYPgk&jump_from=webapi">科技交流群</a></li>
@@ -63,21 +63,6 @@
 	<script src="js/skel.min.js"></script>
 	<script src="js/util.js"></script>
 	<script src="js/main.js"></script>
-	<script type="text/javascript">
-	  function downloadScript() {
-	     $.ajax({
-		cache : false,
-		async : false,
-		type: "get",
-		url: "http://122.112.219.12:9997/version/getDownloUrl",
-		success: function (data) {
-		  if (data.indexOf("http") !== -1) {
-			window.open(data)
-		  }
-		}
-	    });
-	  }
-	</script>
 </body>
 
 </html>
